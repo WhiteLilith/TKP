@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link href="icon.svg" rel="icon">
+
+    <title>Чернова 191-726</title>
+
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                ctx.strokeRect(10, 210, 0, 200)
+                ctx.strokeRect(10, 410, 200, 0)
+                ctx.strokeRect(210, 410, 0, -200)
+            }
+        }
+    </script>
+
+</head>
+
+<body onload="draw();">
+    <div>
+        <canvas id="canvas" width="600" height="500"></canvas>
+    </div>
+    <div class="input">
+        <div>
+            <fieldset>
+                <form action="">
+                    Введите числовое значение: <input type="text" id="inputField" required>
+                    <input type="button" name="addButton" value="Add" id="addButton">
+                </form>
+            </fieldset>
+            <fieldset>
+                <input type="button" name="deleteButton" value="Delete" id="deleteButton">
+            </fieldset>
+        </div>
+        <div>
+            Текущее возвращённое значение:
+        </div>
+        <div id="output">
+
+        </div>
+
+        <script src="js/hw6.js">
+        </script>
+
+    </div>
+</body>
+
+</html>
